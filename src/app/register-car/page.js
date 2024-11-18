@@ -11,10 +11,10 @@ import {
   seats,
 } from "@/app/register-car/constant";
 
+import UploadImage from "@/components/UploadImage";
+
 export default function Page() {
-  const [formData, setFormData] = useState({
-   
-  });
+  const [formData, setFormData] = useState({});
   console.log(formData);
 
   async function handleSubmit(e) {
@@ -171,6 +171,7 @@ export default function Page() {
         isClearable
         isDisabled={!formData.year}
       />
+      <UploadImage setFormData = {setFormData} formData = {formData}/>
 
       <button type="submit">Register</button>
     </form>

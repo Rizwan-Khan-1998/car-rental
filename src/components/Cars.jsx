@@ -25,11 +25,12 @@ export default function Cars() {
       {cars ? (
         cars.map((car, index) => (
           <div key={index}>
+            
+            <img src={car.images[0]} alt="" srcset="" width={80} height={80}/>
             <h2>{car.brand}</h2>
             <p>Model: {car.model}</p>
             <p>Year: {car.year}</p>
             <p>Location: {car.location}</p>
-       
           </div>
         ))
       ) : (
